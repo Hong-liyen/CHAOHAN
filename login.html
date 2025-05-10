@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header bg-white sticky-top">
+        <div class="top p-2">
+            <div class="container d-flex justify-content-between">
+                <div class="nav_bar_left">
+                    <a href="#" class="d-flex align-items-center" onclick="barMenu()">
+                        <img src="images/navbar.svg" alt="" class="bar">
+                        <img src="images/delete.svg" alt="" class="delete">
+                    </a>
+                </div>
+                <div class="nav_bar_right d-flex justify-content-end">
+                    <a href="#" class="login_link d-flex align-items-center px-2" onclick="login()">
+                        <img src="images/user.svg" alt=""><span class="d-md-block d-none">王大明</span>
+                        <img src="images/dropdown_menu.svg" alt="" class="dropdown_arrow d-md-block d-none">
+                        <div class="dropdown_menu rounded m-2 py-3">
+                            <a href="purchase _records.html" class="d-flex flex-column align-items-center py-2 px-3 active">
+                                購買紀錄
+                            </a>
+                            <a href="subscribe_records.html" class="d-flex flex-column align-items-center py-2 px-3">
+                                訂閱紀錄
+                            </a>
+                        </div>
+                    </a>
+                    <a href="shopping_cart.html" class="d-flex align-items-center px-2">
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="logo d-flex justify-content-center">
+            <img src="images/logo.png" alt="">
+        </a>
+        <div class="header_menu text-center">
+            <a href="product_list.html" class="active">全部</a>
+            <a href="product_list.html">特別款式</a>
+            <a href="product_list.html">上衣</a>
+            <a href="product_list.html">下著</a>
+            <a href="product_list.html">洋裝</a>
+            <a href="product_list.html">配件</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="images/form_bn.png" alt="">
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="title text-center fw-bolder p-2">
+                <div class="cn">會員登入</div>
+                <div class="en">Login</div>
+            </div>
+            <div class="row pt-5">
+                <form action="">
+                    <div class="form mx-auto mb-3">
+                        <label for="inputIDnumberEmail" class="form-label">身份證字號/Email</label>
+                        <input type="text" class="form-control" id="inputIDnumberEmail" placeholder="請輸入您的身份證字號/Email">
+                    </div>
+                    <div class="form mx-auto mb-3">
+                        <label for="exampleInputEmail1" class="form-label">密碼</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="請輸入您的密碼">
+                    </div>
+                    <div class="link text-center">
+                        <a href="forget_password.html" class="p-2">忘記密碼</a>|<a href="register.html" class="p-2">註冊</a>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="btn_brown d-flex justify-content-center rounded mt-5 mx-auto">確認</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top p-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 d-flex align-items-center flex-md-row flex-column">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                        <div class="info py-2 lh-md-sm lh-lg">
+                            <li>
+                                <img src="images/home.svg" alt="">匯鼎科技股份有限公司 </li>
+                            <li>
+                                <img src="images/map.svg" alt="">台北市南京東路四段51-2號</li>
+                            <li>
+                                <img src="images/phone.svg" alt="">(02)8786-7417</li>
+                            <li>
+                                <img src="images/email.svg" alt="">yes12345@gmail.com</li>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 d-flex flex-column justify-content-center align-items-md-end align-items-center">
+                        <div class="social d-flex justify-content-center py-2">
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/twitter.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="menu d-flex flex-md-row flex-column py-2">
+                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="select_price.html" class="px-2">會員方案</a>
+                            <a href="qa.html" class="px-2">常見問題</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center p-2">版權所有 Copyright © 2020 All Right 
+            Reserved by CHAOHAN</div>
+    </div>
+    <a href="#" class="service">
+        <span class="d-flex rounded-circle position-fixed">
+            <img src="images/service.svg" alt="">
+        </span>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
