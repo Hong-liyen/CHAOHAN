@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳細頁</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .carousel-indicators {
+        width: 100%;
+        margin: 0;
+    }
+    .carousel-indicators button.thumbnail {
+        height: auto;
+    }
+    .carousel-indicators button.thumbnail {
+        width: 200px;
+    }
+    .carousel-indicators button.thumbnail:not(.active) {
+        opacity: 1;
+    }
+    .carousel-indicators {
+        position: static;
+    }
+</style>
+<body>
+    <div class="header bg-white sticky-top">
+        <div class="top p-2">
+            <div class="container d-flex justify-content-between">
+                <div class="nav_bar_left">
+                    <a href="#" class="d-flex align-items-center" onclick="barMenu()">
+                        <img src="images/navbar.svg" alt="" class="bar">
+                        <img src="images/delete.svg" alt="" class="delete">
+                    </a>
+                </div>
+                <div class="nav_bar_right d-flex justify-content-end">
+                    <a href="login.html" class="d-flex align-items-center px-2">
+                        <img src="images/user.svg" alt=""><span class="d-md-block d-none">會員登入/註冊</span>
+                    </a>
+                    <a href="shopping_cart.html" class="d-flex align-items-center px-2">
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="logo d-flex justify-content-center">
+            <img src="images/logo.png" alt="">
+        </a>
+        <div class="header_menu text-center">
+            <a href="product_list.html" class="active">全部</a>
+            <a href="product_list.html">特別款式</a>
+            <a href="product_list.html">上衣</a>
+            <a href="product_list.html">下著</a>
+            <a href="product_list.html">洋裝</a>
+            <a href="product_list.html">配件</a>
+        </div>
+    </div>
+    
+    <div class="product_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12 p-5">
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/bXo9Pe5.png" class="carousel-item active">
+                                <img src="https://i.imgur.com/bXo9Pe5.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/UCpgWBc.png" class="carousel-item">
+                                <img src="https://i.imgur.com/UCpgWBc.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/o2ZOJvB.png" class="carousel-item">
+                                <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators d-md-flex d-none">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/bXo9Pe5.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/UCpgWBc.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-7 col-12 p-5">
+                    <div class="info">
+                        <div class="product_name fw-bolder py-2">
+                            撞色拼接毛衣
+                        </div>
+                        <div class="description">
+                            ‧ 衣長64cm / 胸寬55cm</br>
+                            ‧ 混紡材質 / 無彈性</br>
+                            ‧ 適穿範圍：胸圍38E內</br>
+                            ‧ S-XL都適穿</br>
+                            ‧ Made in China</br>
+                        </div>
+                        <div class="col-md-4 col-12 pt-3">
+                            <label for="inputSize" class="form-label">尺寸</label>
+                            <select id="inputSize" class="form-select">
+                                <option selected>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-12 pt-3">
+                            <label for="inputColor" class="form-label">顏色</label>
+                            <select id="inputColor" class="form-select">
+                                <option selected>藍色</option>
+                                <option>黃色</option>
+                                <option>白色</option>
+                                <option>綠色</option>
+                            </select>
+                        </div>
+                        <div class="price fw-bolder py-3">NT350</div>
+                        <div class="justify-content-start g-2 d-flex flex-md-row flex-column text-center mt-3">
+                            <a href="#" class="btn_brown rounded">加入購物籃</a>
+                            <a href="#" class="btn_blue rounded mt-3 mt-md-0">立即租用</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="detail py-5 text-center">
+            <div class="container">
+                <div class="title fw-bolder p-2">
+                    <div class="cn">商品資訊</div>
+                    <div class="en">Product Information</div>
+                </div>
+                <div class="detail_img mx-auto pt-5">
+                    <img src="images/product_01.png" alt="">
+                    <img src="images/detail_img.png" alt="" class="pt-5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top p-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 d-flex align-items-center flex-md-row flex-column">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                        <div class="info py-2 lh-md-sm lh-lg">
+                            <li>
+                                <img src="images/home.svg" alt="">匯鼎科技股份有限公司 </li>
+                            <li>
+                                <img src="images/map.svg" alt="">台北市南京東路四段51-2號</li>
+                            <li>
+                                <img src="images/phone.svg" alt="">(02)8786-7417</li>
+                            <li>
+                                <img src="images/email.svg" alt="">yes12345@gmail.com</li>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 d-flex flex-column justify-content-center align-items-md-end align-items-center">
+                        <div class="social d-flex justify-content-center py-2">
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/twitter.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="menu d-flex flex-md-row flex-column py-2">
+                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="select_price.html" class="px-2">會員方案</a>
+                            <a href="qa.html" class="px-2">常見問題</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center p-2">版權所有 Copyright © 2020 All Right 
+            Reserved by CHAOHAN</div>
+    </div>
+    <a href="#" class="service">
+        <span class="d-flex rounded-circle position-fixed">
+            <img src="images/service.svg" alt="">
+        </span>
+    </a>
+    <script src="fslightbox.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const slideshowImages = document.querySelectorAll('.carousel-item')
+        const fullImg = document.querySelector('.imagebox')
+
+        let currentImageCounter = 0; 
+
+        function thumbnail(smallImg) {
+            fullImg.src = smallImg.src;
+
+            slideshowImages[currentImageCounter].style.opacity = 0;
+            currentImageCounter = (currentImageCounter+1) % slideshowImages.length;
+            
+            slideshowImages[currentImageCounter].style.opacity = 1;
+            slideshowImages[currentImageCounter].classList.add('active');
+        }
+    </script>
+</body>
+</html>

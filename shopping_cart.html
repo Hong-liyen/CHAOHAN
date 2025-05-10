@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header bg-white sticky-top">
+        <div class="top p-2">
+            <div class="container d-flex justify-content-between">
+                <div class="nav_bar_left">
+                    <a href="#" class="d-flex align-items-center" onclick="barMenu()">
+                        <img src="images/navbar.svg" alt="" class="bar">
+                        <img src="images/delete.svg" alt="" class="delete">
+                    </a>
+                </div>
+                <div class="nav_bar_right d-flex justify-content-end">
+                    <a href="#" class="login_link d-flex align-items-center px-2" onclick="login()">
+                        <img src="images/user.svg" alt=""><span class="d-md-block d-none">王大明</span>
+                        <img src="images/dropdown_menu.svg" alt="" class="dropdown_arrow d-md-block d-none">
+                        <div class="dropdown_menu rounded m-2 py-3">
+                            <a href="purchase _records.html" class="d-flex flex-column align-items-center py-2 px-3 active">
+                                購買紀錄
+                            </a>
+                            <a href="subscribe_records.html" class="d-flex flex-column align-items-center py-2 px-3">
+                                訂閱紀錄
+                            </a>
+                        </div>
+                    </a>
+                    <a href="shopping_cart.html" class="d-flex align-items-center px-2">
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="logo d-flex justify-content-center">
+            <img src="images/logo.png" alt="">
+        </a>
+        <div class="header_menu text-center">
+            <a href="product_list.html" class="active">全部</a>
+            <a href="product_list.html">特別款式</a>
+            <a href="product_list.html">上衣</a>
+            <a href="product_list.html">下著</a>
+            <a href="product_list.html">洋裝</a>
+            <a href="product_list.html">配件</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="images/shopping_bn.png" alt="">
+    </div>
+    <div class="shopping_cart py-5">
+        <div class="container">
+            <div class="title text-center fw-bolder p-2">
+                <div class="cn">購物車</div>
+                <div class="en">Shopping cart</div>
+            </div>
+            <div class="row pt-5">
+                <table class="table table-borderless text-center">
+                    <thead>
+                        <tr>
+                        <th scope="col">商品名稱</th>
+                        <th scope="col">顏色</th>
+                        <th scope="col">尺寸</th>
+                        <th scope="col">數量</th>
+                        <th scope="col">金額</th>
+                        <th scope="col">刪除商品</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">撞色拼接毛衣</th>
+                        <td>藍色</td>
+                        <td>XL</td>
+                        <td>2</td>
+                        <td></td>
+                        <td><a href="#" class="btn_dark_brown rounded">刪除</a>   
+                        </td>
+                        </tr>
+                        <tr>
+                        <th scope="row">短版黑牛仔外套</th>
+                        <td>黑色</td>
+                        <td>L</td>
+                        <td>1</td>
+                        <td></td>
+                        <td><a href="#" class="btn_dark_brown rounded">刪除</a>   
+                        </td>
+                        </tr>
+                        <tr>
+                        <th scope="row">羊毛拼接花呢外套</th>
+                        <td>黑色</td>
+                        <td>L</td>
+                        <td>1</td>
+                        <td></td>
+                        <td><a href="#" class="btn_dark_brown rounded">刪除</a>   
+                        </td>
+                        </tr>
+                        <tr>
+                        <th scope="row">自由穿搭會員方案</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>$590</td>
+                        <td><a href="#" class="btn_dark_brown rounded">刪除</a>                        
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+            
+            <div class="col-12 text-end">
+                <div class="num">      
+                    共<span class="fw-bolder px-2">4</span>件                
+                </div>
+                <div class="total">
+                    總金額<span class="fw-bolder px-2">$590</span>
+                </div>
+            </div>
+            <div class="col-md-12 d-flex flex-column justify-content-end align-items-end">
+                <div class="col-lg-8 col-md-10 col-12 justify-content-end d-flex flex-md-row flex-column text-center mt-3">
+                    <a href="product_list.html" class="btn_brown rounded">繼續購物</a>
+                    <a href="checkout.html" class="btn_blue rounded mt-3 mt-md-0">立即結帳</a>
+                </div>        
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="top p-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 d-flex align-items-center flex-md-row flex-column">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="">
+                        </div>
+                        <div class="info py-2 lh-md-sm lh-lg">
+                            <li>
+                                <img src="images/home.svg" alt="">匯鼎科技股份有限公司 </li>
+                            <li>
+                                <img src="images/map.svg" alt="">台北市南京東路四段51-2號</li>
+                            <li>
+                                <img src="images/phone.svg" alt="">(02)8786-7417</li>
+                            <li>
+                                <img src="images/email.svg" alt="">yes12345@gmail.com</li>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 d-flex flex-column justify-content-center align-items-md-end align-items-center">
+                        <div class="social d-flex justify-content-center py-2">
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                            <a href="#" class="d-flex justify-content-center">
+                                <img src="images/twitter.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="menu d-flex flex-md-row flex-column py-2">
+                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="select_price.html" class="px-2">會員方案</a>
+                            <a href="qa.html" class="px-2">常見問題</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center p-2">版權所有 Copyright © 2020 All Right 
+            Reserved by CHAOHAN</div>
+    </div>
+    <a href="#" class="service">
+        <span class="d-flex rounded-circle position-fixed">
+            <img src="images/service.svg" alt="">
+        </span>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
