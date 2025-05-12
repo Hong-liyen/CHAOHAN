@@ -38,3 +38,16 @@ for(i=0; i<answer_text.length; i++) {
         this.classList.toggle('auto')
     })
 }
+
+// 客服聊天室
+const chatbox = document.querySelector('.chatbox');
+
+function chatbox_open() {
+    chatbox.classList.add('open')
+    chatbox.classList.remove('close')
+}
+
+function chatbox_close() {
+    chatbox.classList.add('close')
+    chatbox.classList.remove('open')
+}
