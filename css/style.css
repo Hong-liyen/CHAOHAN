@@ -329,7 +329,7 @@ table .return {
 .copyright {
     background-color: #D1C7BD;
 }
-.service span {
+.service {
     z-index: 20;
     width: 3.5em;
     height: 3.5em;
@@ -338,6 +338,9 @@ table .return {
     border: 3px solid #fff;    
     bottom: 10em;
     right: 4em;
+}
+.service img {
+    width: 2.5em;
 }
 .chatbox {
     position: fixed;
@@ -466,7 +469,7 @@ table .return {
     .footer .menu a:not(:last-child) {
         border-right: none;
     }
-    .service span {
+    .service {
         bottom: 1em;
         right: 1em;
     }
