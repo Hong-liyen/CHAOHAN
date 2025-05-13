@@ -375,11 +375,15 @@ table .return {
     height: 400px;
     overflow-y: scroll;
 }
-.chatbox .chatbox_dialog .left span {
+.chatbox .chatbox_dialog .left .dialog_text {
     background-color: #F5F5F5;
 }
-.chatbox .chatbox_dialog .right span {
+.chatbox .chatbox_dialog .right .dialog_text {
     background-color: #2955dc;
+}
+.chatbox .chatbox_dialog .time {
+    font-size: .8em;
+    color: #444;
 }
 .chatbox .chatbox_footer {
     position: absolute;
