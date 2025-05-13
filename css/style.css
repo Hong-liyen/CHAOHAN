@@ -385,13 +385,6 @@ table .return {
     font-size: .8em;
     color: #444;
 }
-.chatbox .chatbox_footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-}
 .chatbox .chatbox_footer .chatbox_send {
     margin-left: 10px;
     width: 1.5em;
@@ -485,5 +478,12 @@ table .return {
     .chatbox .chatbox_dialog {
         height: 100vh;
         overflow-y: scroll;
+    }
+    .chatbox .chatbox_footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
     }
 }
