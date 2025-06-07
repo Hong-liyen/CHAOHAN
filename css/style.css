@@ -13,7 +13,7 @@ li {
     color: #444;
 }
 .logo img {
-    width: 10em;
+    width: 8em;
 }
 .title .cn {
     font-size: 1.5em;
@@ -29,6 +29,22 @@ li {
 .yellow .en {
     color: rgba(255, 253, 213, .5);
 }
+.btn_outline_brown {
+    font-size: 1.2em;
+    background-color: #fff;
+    border: 1px solid #9A6D3B;
+    color: #9A6D3B;
+    width: 35%;
+    padding: 10px 8px;
+}
+.btn_fill_brown {
+    font-size: 1.2em;
+    background-color: #9A6D3B;
+    color: #fff;
+    width: 35%;
+    padding: 10px 8px;
+}
+
 .btn_brown {
     font-size: 1.2em;
     background-color: #E3DED8;
@@ -36,7 +52,17 @@ li {
     width: 35%;
     padding: 10px 8px;
 }
-.btn_brown:hover{
+.btn_orange {
+    font-size: 1em;
+    background: linear-gradient(-45deg, #EE5D2D, #F2AE14);
+    width: 100%;
+    padding: 10px 8px;
+}
+.search_box .btn_fill_brown {
+    width: auto;
+    padding: 8px;
+}
+.btn_brown:hover, .btn_outline_brown:hover {
     color: #9A6D3B;
 }
 .btn_brown img {
@@ -72,6 +98,24 @@ li {
     padding: 6px 8px;
 }
 .btn_dark_brown:hover, .btn_grey:hover, .btn_red:hover {
+    color: #fff;
+}
+.bar_menu {
+    background-color: #C79E6C;
+}
+.aside_menu {
+    display: flex;
+}
+.aside_menu a {
+    background: #F5F5F5;
+    margin-bottom: 8px;
+    color: #444;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.aside_menu .active {
+    background: #C79E6C;
     color: #fff;
 }
 .icon5 {
@@ -122,7 +166,7 @@ form img {
     width: 2.5em;
 }
 .form {
-    width: 35%;
+    width: 50%;
 }
 .link {
     color: #A8A8A8;
@@ -131,8 +175,12 @@ form img {
     color: #9A6D3B;
 }
 /* Header */
-.header .top {
+.header {
     background-color: #E3DED8;
+}
+.header_scroll {
+    display: flex;
+    align-items: center;
 }
 .header .top a {
     color: #9A6D3B;
@@ -143,7 +191,7 @@ form img {
     margin-right: 5px;
 }
 .header_menu {
-    padding: 10px;
+    padding: 4px 0 8px;
 }
 .header .header_menu a {
     color: #444;
@@ -160,11 +208,22 @@ form img {
 .nav_bar_right {
     position: relative;
 }
+.search_box {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 6%;
+    z-index: 20;
+    width: 350px;
+    height: 4.8em;
+    background-color: #FDEDDD;
+    border: 1px solid #9A6D3B;
+}
 .dropdown_menu {
     display: none;
     position: absolute;
     top: 30px;
-    left: 0;
+    left: 60px;
     z-index: 20;
     background-color: #E3DED8;
     border: 1px solid #9A6D3B;
@@ -180,6 +239,9 @@ form img {
     width: 8px;
     margin-left: 6px;
 }
+.menu_icon{
+    width: 2.5em;
+}
 .open {
     display: block;
 }
@@ -190,6 +252,21 @@ form img {
     background-color: #C79E6C;
 }
 /* Product_list */
+.carousel {
+    position: relative;
+}
+.left_arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+}
+.right_arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+}
 .product_list .product_name {
     font-size: 1.5em;
     color: #444;
@@ -211,7 +288,7 @@ form img {
 .product_list label {
     font-size: .8em;
 }
-.product_list .btn_brown, .shopping_cart .btn_brown {
+.product_list .btn_outline_brown, .shopping_cart .btn_brown {
     margin-right: 8px;
 }
 /* QA */
@@ -266,24 +343,41 @@ form img {
     background-color: #C79E6C;
 }
 .select_price .item {
-    background-color: #FFFDD5;
-    height: 30em;
+    height: 25em;
+    border-image: linear-gradient(#F2AE14, #EE5D2D) 30;
+    mask: linear-gradient(black, black);
+    border-width: 5px;
+    border-radius: 16px;
+    border-style: solid;
 }
-.select_price .item.bg-white {
-    transform: scale(1.05);
+.select_price .item li img {
+    width: 1.5em;
+    margin-right: 5px;
 }
-.select_price .price, .select_price .tip {
+.btn_orange img {
+    margin-left: 8px;
+    width: 1em;
+}
+.select_price .price {
     color: #DE0707;
 }
 .select_price .tip {
-    font-size: .8em;
+    color: #EE5D2D;
+    background-color: #FFFDD5;
+}
+.select_price .tip {
+    font-size: 1em;
+}
+.select_price .tip img {
+    width: 1em;
+    margin-right: 5px;
 }
 .select_price .price span, .select_price .price p {
     font-size: .5em;
     font-weight: 500;
     color: #444;
 }
-.select_price h3 {
+.select_price h5 {
     color: #9A6D3B;
 }
 /* Shopping cart */
@@ -446,7 +540,16 @@ table .return {
         left: 0;
         z-index: 20;
     }
-    
+    .search_box {
+        display: none;
+        width: auto;
+        height: 4.5em;
+        left: 0;
+        right: 0;
+    }
+    .aside_menu {
+        display: none;
+    }
     /* Product_item */
     .detail_img img {
         width: 100%;
