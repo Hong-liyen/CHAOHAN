@@ -4,7 +4,6 @@ const header_menu = document.querySelector('.header_menu');
 const bar = document.querySelector('.bar');
 const delete_menu = document.querySelector('.delete');
 
-
 function barMenu() {
     header_menu.classList.toggle('open')
     if(header_menu.classList.contains('open')) {
@@ -13,6 +12,19 @@ function barMenu() {
     } else {
         delete_menu.style.display = 'none'
         bar.style.display = 'block'
+    }
+}
+
+// 手機板側邊選單
+const bar_menu = document.querySelector('.bar_menu');
+const aside_menu = document.querySelector('.aside_menu');
+
+function menu_icon() {
+    aside_menu.classList.toggle('open')
+    if(aside_menu.classList.contains('open')) {
+        aside_menu.style.display = 'block'
+    } else {
+        aside_menu.style.display = 'none'
     }
 }
 
@@ -27,6 +39,18 @@ function login() {
         dropdown_arrow.style.transform = 'rotate(180deg)'
     } else {
         dropdown_arrow.style.transform = 'rotate(0deg)'
+    }
+}
+
+// 搜尋選單
+const search_box = document.querySelector('.search_box');
+
+function searchBox() {
+    search_box.classList.toggle('open')
+    if(search_box.classList.contains('open')) {
+        search_box.style.display = 'block'
+    } else {
+        search_box.style.display = 'none'
     }
 }
 
