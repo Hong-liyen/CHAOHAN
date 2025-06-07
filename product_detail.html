@@ -16,7 +16,7 @@
         height: auto;
     }
     .carousel-indicators button.thumbnail {
-        width: 200px;
+        width: 50px;
     }
     .carousel-indicators button.thumbnail:not(.active) {
         opacity: 1;
@@ -26,8 +26,8 @@
     }
 </style>
 <body>
-    <div class="header bg-white sticky-top">
-        <div class="top p-2">
+    <div class="header sticky-top">
+        <div class="top p-1">
             <div class="container d-flex justify-content-between">
                 <div class="nav_bar_left">
                     <a href="#" class="d-flex align-items-center" onclick="barMenu()">
@@ -36,33 +36,48 @@
                     </a>
                 </div>
                 <div class="nav_bar_right d-flex justify-content-end">
+                    <a href="#" class="d-flex align-items-center px-2" onclick="searchBox()">
+                        <img src="images/search.svg" alt=""><span class="d-md-block d-none">搜尋</span>
+                    </a>
                     <a href="login.html" class="d-flex align-items-center px-2">
                         <img src="images/user.svg" alt=""><span class="d-md-block d-none">會員登入/註冊</span>
                     </a>
                     <a href="shopping_cart.html" class="d-flex align-items-center px-2">
-                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">租衣籃<span>(20)</span></span>
                     </a>
                 </div>
             </div>
         </div>
-        <a href="index.html" class="logo d-flex justify-content-center">
-            <img src="images/logo.png" alt="">
-        </a>
-        <div class="header_menu text-center">
-            <a href="product_list.html" class="active">全部</a>
-            <a href="product_list.html">特別款式</a>
-            <a href="product_list.html">上衣</a>
-            <a href="product_list.html">下著</a>
-            <a href="product_list.html">洋裝</a>
-            <a href="product_list.html">配件</a>
+        <div class="search_box rounded m-2 py-3">
+            <div class="input-group w-auto align-items-center justify-content-center">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" placeholder="請輸入關鍵字" />
+                </div>
+                <button type="button" class="d-flex btn btn_fill_brown">
+                    <img src="images/search_w.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="d-md-flex d-block text-center container-md align-items-center">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+            <div class="header_menu text-center">
+                <a href="product_list.html" class="active">全部</a>
+                <a href="product_list.html">特別款式</a>
+                <a href="product_list.html">上衣</a>
+                <a href="product_list.html">下著</a>
+                <a href="product_list.html">洋裝</a>
+                <a href="product_list.html">配件</a>
+            </div>
         </div>
     </div>
     
     <div class="product_list">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 col-12 p-5">
-                    <div class="carousel">
+                <div class="col-lg-6 col-md-5 col-12 p-lg-5 p-3">
+                    <div class="carousel px-lg-5">
                         <div class="carousel-inner">
                             <a data-fslightbox="gallery" href="https://i.imgur.com/bXo9Pe5.png" class="carousel-item active">
                                 <img src="https://i.imgur.com/bXo9Pe5.png" class="d-block w-100 imagebox" alt="">
@@ -73,6 +88,19 @@
                             <a data-fslightbox="gallery" href="https://i.imgur.com/o2ZOJvB.png" class="carousel-item">
                                 <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100 imagebox" alt="">
                             </a>
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/bXo9Pe5.png" class="carousel-item active">
+                                <img src="https://i.imgur.com/bXo9Pe5.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/UCpgWBc.png" class="carousel-item">
+                                <img src="https://i.imgur.com/UCpgWBc.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                            <a data-fslightbox="gallery" href="https://i.imgur.com/o2ZOJvB.png" class="carousel-item">
+                                <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100 imagebox" alt="">
+                            </a>
+                        </div>
+                        <div class="controls">
+                            <img src="images/left-arrow.svg" alt="" srcset="" class="left_arrow" onclick="prev()">
+                            <img src="images/right-arrow.svg" alt="" srcset="" class="right_arrow" onclick="next()">
                         </div>
                     </div>
                     <div class="carousel-indicators d-md-flex d-none">
@@ -85,9 +113,18 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
                             <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
                         </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/bXo9Pe5.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/UCpgWBc.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" class="thumbnail">
+                            <img src="https://i.imgur.com/o2ZOJvB.png" class="d-block w-100" alt="" onclick="thumbnail(this)">
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-7 col-12 p-5">
+                <div class="col-lg-6 col-md-7 col-12 p-lg-5 p-3">
                     <div class="info">
                         <div class="product_name fw-bolder py-2">
                             撞色拼接毛衣
@@ -125,10 +162,9 @@
                                 <button class="btn btn-outline-secondary" type="button">+</button>
                             </div>
                         </div>
-                        <div class="price fw-bolder py-3">NT350</div>
                         <div class="justify-content-start g-2 d-flex flex-md-row flex-column text-center mt-3">
-                            <a href="#" class="btn_brown rounded">加入購物籃</a>
-                            <a href="#" class="btn_blue rounded mt-3 mt-md-0">立即租用</a>
+                            <a href="#" class="btn_outline_brown rounded">加入租衣籃</a>
+                            <a href="#" class="btn_fill_brown rounded mt-3 mt-md-0">立即租用</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +177,14 @@
                     <div class="cn">商品資訊</div>
                     <div class="en">Product Information</div>
                 </div>
-                <div class="detail_img mx-auto pt-5">
+                <div class="text-secondary text-center py-3">
+                    ‧ 衣長64cm / 胸寬55cm</br>
+                    ‧ 混紡材質 / 無彈性</br>
+                    ‧ 適穿範圍：胸圍38E內</br>
+                    ‧ S-XL都適穿</br>
+                    ‧ Made in China</br>
+                </div>
+                <div class="detail_img mx-auto pt-3">
                     <img src="images/product_01.png" alt="">
                     <img src="images/detail_img.png" alt="" class="pt-5">
                 </div>
@@ -184,7 +227,7 @@
                             </a>
                         </div>
                         <div class="menu d-flex flex-md-row flex-column py-2">
-                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="account.html" class="px-2">會員中心</a>
                             <a href="select_price.html" class="px-2">會員方案</a>
                             <a href="qa.html" class="px-2">常見問題</a>
                         </div>
@@ -291,6 +334,28 @@
     <script src="js/fslightbox.js"></script>
     <script src="js/script.js"></script>
     <script>
+        const carousel_inner = document.querySelector('.carousel-inner')
+        const carousel_item = document.querySelectorAll('.carousel-item')
+        const prevBtn = document.querySelector('.left_arrow')
+        const nextBtn = document.querySelector('.right_arrow')
+
+        let slideIndex = 0
+        carousel_item[slideIndex].classList.add('active')
+
+        function prev() {
+            carousel_item[slideIndex].classList.remove('active');
+
+            slideIndex = (slideIndex === 0) ? carousel_item.length - 1 : slideIndex + 1;
+            carousel_item[slideIndex].classList.add('active');
+        }
+
+        function next() {
+            carousel_item[slideIndex].classList.remove('active');
+
+            slideIndex = (slideIndex === carousel_item.length -1) ? 0 : slideIndex + 1;
+            carousel_item[slideIndex].classList.add('active');
+        }
+
         const slideshowImages = document.querySelectorAll('.carousel-item')
         const fullImg = document.querySelector('.imagebox')
 

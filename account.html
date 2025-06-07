@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>訂單紀錄</title>
+    <title>我的帳戶</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -65,8 +65,8 @@
                         <img src="images/menu_w.svg" alt="" class="menu_icon p-2">
                     </a>
                     <div class="aside_menu flex-column">
-                        <a href="account.html" class="p-2">我的帳戶</a>
-                        <a href="purchase _records.html" class="active p-2">訂單紀錄</a>
+                        <a href="account.html" class="active p-2">我的帳戶</a>
+                        <a href="purchase _records.html" class="p-2">訂單紀錄</a>
                         <a href="subscribe_records.html" class="p-2">訂閱紀錄</a>
                         <a href="forget_password.html" class="p-2">忘記密碼</a>
                         <a href="modify_information.html" class="p-2">修改資料</a>
@@ -75,10 +75,10 @@
                 </div>
                 <div class="col-md-9 col-12">
                     <div class="title text-center fw-bolder p-2">
-                        <div class="cn">訂單紀錄</div>
-                        <div class="en">Purchase records</div>
+                        <div class="cn">最新訂單</div>
+                        <div class="en">Latest orders</div>
                     </div>
-                    <div class="row pt-5">
+                    <div class="pt-5">
                         <table class="table table-borderless text-start">
                             <thead>
                                 <tr>
@@ -216,6 +216,41 @@
                                         </table>
                                     </div>
                                 </th>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="title text-center fw-bolder p-2">
+                        <div class="cn">最新訂閱</div>
+                        <div class="en">Latest subscribe</div>
+                    </div>
+                    <div class="row pt-5">
+                        <table class="table table-borderless text-center">
+                            <thead>
+                                <tr>
+                                <th scope="col">方案名稱</th>
+                                <th scope="col">金額</th>
+                                <th scope="col">訂閱狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">自由穿搭會員方案</th>
+                                <td>$590</td>
+                                <td><a href="#" class="btn_grey rounded">已訂閱</a>   
+                                </td>
+                                </tr>
+                                <tr>
+                                <th scope="row">高級尊榮會員方案</th>
+                                <td>$2500</td>
+                                <td><a href="#" class="btn_dark_brown rounded">取消訂閱</a>   
+                                </td>
+                                </tr>
+                                <tr>
+                                <th scope="row">時尚常客會員方案</th>
+                                <td>$990</td>
+                                <td><a href="#" class="btn_dark_brown rounded">取消訂閱</a>   
                                 </td>
                                 </tr>
                             </tbody>

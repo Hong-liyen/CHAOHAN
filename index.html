@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header bg-white sticky-top">
-        <div class="top p-2">
+    <div class="header sticky-top">
+        <div class="top p-1">
             <div class="container d-flex justify-content-between">
                 <div class="nav_bar_left">
                     <a href="#" class="d-flex align-items-center" onclick="barMenu()">
@@ -18,25 +18,40 @@
                     </a>
                 </div>
                 <div class="nav_bar_right d-flex justify-content-end">
+                    <a href="#" class="d-flex align-items-center px-2" onclick="searchBox()">
+                        <img src="images/search.svg" alt=""><span class="d-md-block d-none">搜尋</span>
+                    </a>
                     <a href="login.html" class="d-flex align-items-center px-2">
                         <img src="images/user.svg" alt=""><span class="d-md-block d-none">會員登入/註冊</span>
                     </a>
                     <a href="shopping_cart.html" class="d-flex align-items-center px-2">
-                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">租衣籃<span>(20)</span></span>
                     </a>
                 </div>
             </div>
         </div>
-        <a href="index.html" class="logo d-flex justify-content-center">
-            <img src="images/logo.png" alt="">
-        </a>
-        <div class="header_menu text-center">
-            <a href="product_list.html" class="active">全部</a>
-            <a href="product_list.html">特別款式</a>
-            <a href="product_list.html">上衣</a>
-            <a href="product_list.html">下著</a>
-            <a href="product_list.html">洋裝</a>
-            <a href="product_list.html">配件</a>
+        <div class="search_box rounded m-2 py-3">
+            <div class="input-group w-auto align-items-center justify-content-center">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" placeholder="請輸入關鍵字" />
+                </div>
+                <button type="button" class="d-flex btn btn_fill_brown">
+                    <img src="images/search_w.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="scroll container-md">
+            <a href="index.html" class="logo d-flex justify-content-center">
+                <img src="images/logo.png" alt="">
+            </a>
+            <div class="header_menu text-center">
+                <a href="product_list.html" class="active">全部</a>
+                <a href="product_list.html">特別款式</a>
+                <a href="product_list.html">上衣</a>
+                <a href="product_list.html">下著</a>
+                <a href="product_list.html">洋裝</a>
+                <a href="product_list.html">配件</a>
+            </div>
         </div>
     </div>
     <div class="carousel">
@@ -281,7 +296,7 @@
                             </a>
                         </div>
                         <div class="menu d-flex flex-md-row flex-column py-2">
-                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="account.html" class="px-2">會員中心</a>
                             <a href="select_price.html" class="px-2">會員方案</a>
                             <a href="qa.html" class="px-2">常見問題</a>
                         </div>
@@ -406,6 +421,18 @@
             slideshowImages[currentImageCounter].style.opacity = 1;
             slideshowImages[currentImageCounter].classList.add('active');
         }
+
+        const header = document.querySelector('.header');
+        const header_scroll = document.querySelector('.scroll');
+        window.addEventListener('scroll', function(e) {
+
+            let scroll = this.scrollY;
+            if(scroll > 254 && header.clientHeight > 60) {
+                header_scroll.classList.add('header_scroll')
+            } else {
+                header_scroll.classList.remove('header_scroll')
+            }
+        });
     </script>
 </body>
 </html>

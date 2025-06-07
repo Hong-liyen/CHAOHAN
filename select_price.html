@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header bg-white sticky-top">
-        <div class="top p-2">
+    <div class="header sticky-top">
+        <div class="top p-1">
             <div class="container d-flex justify-content-between">
                 <div class="nav_bar_left">
                     <a href="#" class="d-flex align-items-center" onclick="barMenu()">
@@ -18,93 +18,111 @@
                     </a>
                 </div>
                 <div class="nav_bar_right d-flex justify-content-end">
-                    <a href="#" class="login_link d-flex align-items-center px-2" onclick="login()">
-                        <img src="images/user.svg" alt=""><span class="d-md-block d-none">王大明</span>
-                        <img src="images/dropdown_menu.svg" alt="" class="dropdown_arrow d-md-block d-none">
-                        <div class="dropdown_menu rounded m-2 py-3">
-                            <a href="purchase _records.html" class="d-flex flex-column align-items-center py-2 px-3 active">
-                                購買紀錄
-                            </a>
-                            <a href="subscribe_records.html" class="d-flex flex-column align-items-center py-2 px-3">
-                                訂閱紀錄
-                            </a>
-                        </div>
+                    <a href="#" class="d-flex align-items-center px-2" onclick="searchBox()">
+                        <img src="images/search.svg" alt=""><span class="d-md-block d-none">搜尋</span>
+                    </a>
+                    <a href="login.html" class="d-flex align-items-center px-2">
+                        <img src="images/user.svg" alt=""><span class="d-md-block d-none">會員登入/註冊</span>
                     </a>
                     <a href="shopping_cart.html" class="d-flex align-items-center px-2">
-                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">購物車</span>
+                        <img src="images/shoppingcart.svg" alt=""><span class="d-md-block d-none">租衣籃<span>(20)</span></span>
                     </a>
                 </div>
             </div>
         </div>
-        <a href="index.html" class="logo d-flex justify-content-center">
-            <img src="images/logo.png" alt="">
-        </a>
-        <div class="header_menu text-center">
-            <a href="product_list.html" class="active">全部</a>
-            <a href="product_list.html">特別款式</a>
-            <a href="product_list.html">上衣</a>
-            <a href="product_list.html">下著</a>
-            <a href="product_list.html">洋裝</a>
-            <a href="product_list.html">配件</a>
+        <div class="search_box rounded m-2 py-3">
+            <div class="input-group w-auto align-items-center justify-content-center">
+                <div class="form-outline">
+                    <input type="search" id="form1" class="form-control" placeholder="請輸入關鍵字" />
+                </div>
+                <button type="button" class="d-flex btn btn_fill_brown">
+                    <img src="images/search_w.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="d-md-flex d-block text-center container-md align-items-center">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+            <div class="header_menu text-center">
+                <a href="product_list.html" class="active">全部</a>
+                <a href="product_list.html">特別款式</a>
+                <a href="product_list.html">上衣</a>
+                <a href="product_list.html">下著</a>
+                <a href="product_list.html">洋裝</a>
+                <a href="product_list.html">配件</a>
+            </div>
         </div>
     </div>
     <div class="banner">
         <img src="images/price_bn.png" alt="">
     </div>
     <div class="select_price py-5">
-        <div class="container text-center">
-            <div class="title yellow fw-bolder p-2">
+        <div class="container">
+            <div class="title yellow fw-bolder p-2 text-center">
                 <div class="cn">選擇方案</div>
                 <div class="en">Select price</div>
+                <div class="text-white p-3 h3 fw-bolder">幫你找到理想的服飾</div>
+                <span class="tip rounded m-3 p-3">        
+                    <img src="images/bulb.svg" alt="">
+                    首次訂閱需付訂金$6000，未滿半年退訂恕不退費</span>
             </div>
             <div class="row pt-5">
-                <div class="col-md-4 col-12">
-                    <div class="item rounded d-flex flex-column justify-content-around p-md-4 p-5 my-3">
-                        <h2 class="price fw-bolder">$590
-                            <span>起</span>
-                            <p>（依件數彈性加購）</p>
-                        </h2>
-                        <h3 class="fw-bolder">自由穿搭會員</h3>
-                        <div class="text pt-3">
-                            <h5 class="fw-bolder">包月制</h5>
-                            <li>每月基本2件服裝</li>
-                            <li>可自由加選</li>
-                            <li>無限次更換款式（加價制）</li>
-                        </div>
-                        <div class="tip pt-5">首次訂閱需付訂金$6000</br>
-                            未滿半年退訂恕不退費</div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 text-start">
                     <div class="item bg-white rounded d-flex flex-column justify-content-around p-md-4 p-5 my-3">
-                        <h2 class="price fw-bolder">$990</h2>
-                        <h3 class="fw-bolder">時尚常客會員</h3>
+                        <h5 class="fw-bolder">自由穿搭會員</h5>
+                        <h2 class="price fw-bolder">$590</h2>
+                        <a href="#" class="btn_orange text-white d-flex justify-content-center rounded-pill m-2 mx-auto">升級至自由穿搭會員<img src="images/arrow_w.svg" alt=""></a>
                         <div class="text pt-3">
-                            <h5 class="fw-bolder">包月制</h5>
-                            <li>每月基本3件服裝</li>
-                            <li>享9折續租優惠</li>
-                            <li>專屬新品優先試穿權</li>
+                            <li class="d-flex align-items-center border-bottom py-3">                    
+                                <img src="images/icon_price_01.svg" alt="">
+                                每月基本2件服裝</li>
+                            <li class="d-flex align-items-center border-bottom py-3">
+                                <img src="images/icon_price_02.svg" alt="">
+                                可自由加選</li>
+                            <li class="d-flex align-items-center py-3">
+                                <img src="images/icon_price_03.svg" alt="">
+                                無限次更換款式（加價制）</li>
                         </div>
-                        <div class="tip pt-5">首次訂閱需付訂金$6000</br>
-                            未滿半年退訂恕不退費</div>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
-                    <div class="item rounded d-flex flex-column justify-content-around p-md-4 p-5 my-3">
-                        <h2 class="price fw-bolder">$2500</h2>
-                        <h3 class="fw-bolder">高端尊榮會員</h3>
+                <div class="col-md-4 col-12 text-start">
+                    <div class="item bg-white rounded d-flex flex-column justify-content-around p-md-4 p-5 my-3">
+                        <h5 class="fw-bolder">時尚常客會員</h5>
+                        <h2 class="price fw-bolder">$990</h2>
+                        <a href="#" class="btn_orange text-white d-flex justify-content-center rounded-pill m-2 mx-auto">升級至時尚常客會員<img src="images/arrow_w.svg" alt=""></a>
                         <div class="text pt-3">
-                            <h5 class="fw-bolder">包月制</h5>
-                            <li>每月任選8件高級款式</li>
-                            <li>免費造型諮詢一次</li>
-                            <li>生日當月贈送專屬禮服租借</li>
+                            <li class="d-flex align-items-center border-bottom py-3">
+                                <img src="images/icon_price_01.svg" alt="">
+                                每月基本3件服裝</li>
+                            <li class="d-flex align-items-center border-bottom py-3">
+                                <img src="images/icon_price_02.svg" alt="">
+                                享9折續租優惠</li>
+                            <li class="d-flex align-items-center py-3">
+                                <img src="images/icon_price_03.svg" alt="">
+                                專屬新品優先試穿權</li>
                         </div>
-                        <div class="tip pt-5">首次訂閱需付訂金$6000</br>
-                            未滿半年退訂恕不退費</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-start">
+                    <div class="item bg-white rounded d-flex flex-column justify-content-around p-md-4 p-5 my-3">
+                        <h5 class="fw-bolder">高端尊榮會員</h5>
+                        <h2 class="price fw-bolder">$2500</h2>
+                        <a href="#" class="btn_orange text-white d-flex justify-content-center rounded-pill m-2 mx-auto">升級至高端尊榮會員<img src="images/arrow_w.svg" alt=""></a>
+                        <div class="text pt-3">
+                            <li class="d-flex align-items-center border-bottom py-3">
+                                <img src="images/icon_price_01.svg" alt="">
+                                每月任選8件高級款式</li>
+                            <li class="d-flex align-items-center border-bottom py-3">
+                                <img src="images/icon_price_02.svg" alt="">
+                                免費造型諮詢一次</li>
+                            <li class="d-flex align-items-center py-3">
+                                <img src="images/icon_price_03.svg" alt="">
+                                生日當月贈送專屬禮服租借</li>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn_brown d-flex justify-content-center rounded mt-5 mx-auto">立即選購<img src="images/arrow.svg" alt=""></a>
         </div>
     </div>
 
@@ -143,7 +161,7 @@
                             </a>
                         </div>
                         <div class="menu d-flex flex-md-row flex-column py-2">
-                            <a href="modify_information.html" class="px-2">會員中心</a>
+                            <a href="account.html" class="px-2">會員中心</a>
                             <a href="select_price.html" class="px-2">會員方案</a>
                             <a href="qa.html" class="px-2">常見問題</a>
                         </div>
