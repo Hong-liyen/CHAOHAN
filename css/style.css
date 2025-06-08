@@ -65,6 +65,9 @@ li {
 .btn_brown:hover, .btn_outline_brown:hover {
     color: #9A6D3B;
 }
+.btn_fill_brown:hover {
+    color: #fff;
+}
 .btn_brown img {
     width: 1em;
     margin-left: 10px;
@@ -486,7 +489,7 @@ table .return {
 }
 @media only screen and (max-width: 768px) {
     /* Common */
-    .btn_brown, .btn_blue {
+    .btn_brown, .btn_blue, .btn_outline_brown, .btn_fill_brown {
         font-size: 1em;
         width: 100%;
         padding: 8px 6px;
